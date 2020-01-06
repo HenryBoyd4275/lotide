@@ -7,11 +7,13 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//Test
-/*
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual(5+5,10);
-assertEqual("Var","Var");
-assertEqual("5",5);
-*/
+const head = function(array) {
+  return array[0];
+}
+
+// Test
+
+assertEqual(head([5,6,7]), 5);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+assertEqual(head([6]),6);
+assertEqual(head([]),undefined);
