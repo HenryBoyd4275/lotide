@@ -25,3 +25,4 @@ console.log(countLetters(""));
 console.log(countLetters(" "));
 console.log(countLetters("aaaaaa"));
 console.log(countLetters("aaaaaaaAAAAAAAA!"));
+console.log(countLetters("@#$%^#$^🛑(&^%*$^*&%#"));
