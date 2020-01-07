@@ -11,19 +11,19 @@ const assertArraysEqual = function(actual, expected) {
   eqArrays(actual, expected) ? console.log(`✅ Assertion passed: ${actual} === ${expected}`) : console.log(`🛑 Assertion failed: ${actual} !== ${expected}`);
 };
 
-const doesArrayContain = function (array, value){
-  for (let element of array){
-    if (element===value) {
-      return true
+const doesArrayContain = function(array, value) {
+  for (let element of array) {
+    if (element === value) {
+      return true;
     }
   }
   return false;
-}
+};
 
 const without = function(source, itemsToRemove) {
   let result = [];
   for (let sourceElement of source) {
-    if (!(doesArrayContain(itemsToRemove, sourceElement))){
+    if (!(doesArrayContain(itemsToRemove, sourceElement))) {
       result.push(sourceElement);
     }
   }
