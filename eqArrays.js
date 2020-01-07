@@ -7,6 +7,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(arrayActual, arrayExpected) {
+  if(arrayActual.length !== arrayExpected.length) return false;
+
   for (let i = 0; i < arrayActual.length; i++) {
     if (!(arrayActual[i] === arrayExpected[i])) {
       return false;
@@ -15,10 +17,9 @@ const eqArrays = function(arrayActual, arrayExpected) {
   return true;
 };
 
-/*
+
 assertEqual(eqArrays([1,2,3], [1,2,3]), true);
 assertEqual(eqArrays([1,2,3], [1,2,2]), false);
 assertEqual(eqArrays([], []), true);
 assertEqual(eqArrays([1,2,3], [1,2]), false);
 assertEqual(eqArrays([1,2,3], [1,2,'3']), false);
-*/
