@@ -15,7 +15,7 @@ const tail = function(array) {
   return result;
 };
 
-//test case: basic
+/*test case: basic
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result.length, 2); // ensure we get back two elements
@@ -41,3 +41,4 @@ assertEqual(test2[0], 'one');
 assertEqual(test2[1], 2);
 assertEqual(test2[2], 'three');
 assertEqual(test2[3], 4);
+*/
