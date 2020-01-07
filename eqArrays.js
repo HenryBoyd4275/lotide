@@ -6,14 +6,14 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function (arrayActual, arrayExpected) {
+const eqArrays = function(arrayActual, arrayExpected) {
   for (let i = 0; i < arrayActual.length; i++) {
     if (!(arrayActual[i] === arrayExpected[i])) {
       return false;
     }
   }
   return true;
-}
+};
 
 /*
 assertEqual(eqArrays([1,2,3], [1,2,3]), true);
