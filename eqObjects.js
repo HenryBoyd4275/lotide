@@ -30,16 +30,24 @@ const eqObjects = function(object1, object2) {
       }
       console.log("arrays equal:", object1[element], " === ", object2[element]);
     }
-    // else if (typeof(object1) === object1[element] && object1[element !== null]){
-    // recursion of nested object goes here. something likei: if (!eqObjects(object1[element], object2[element])) return false
-    // }
+    else if (typeof(object1[element]) === 'object' && object1[element] !== null){
+      if (!eqObjects(object1[element], object2[element])) {
+        return false
+      }
+    }
     else if (object1[element] !== object2[element]) {
+      console.log('here');
       return false;
     }
   }
 
   return true;
 };
+
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })) // => true
+
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })) // => false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })) // => false
 
 
 // const ab = { a: "1", b: "2" };
