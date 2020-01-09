@@ -1,13 +1,13 @@
 const takeUntil = function(array, callback) {
   let result = [];
-  for (element of array) {
-    if (callback(element)){
+  for (const element of array) {
+    if (callback(element)) {
       return result;
     } else {
       result.push(element);
     }
   }
-}
+};
 
 /*
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];

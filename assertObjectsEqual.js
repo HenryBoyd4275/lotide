@@ -23,7 +23,7 @@ const eqObjects = function(object1, object2) {
         return false;
       }
       console.log("arrays equal:", object1[element], " === ", object2[element]);
-    } 
+    }
     // else if (typeof(object1) === object1[element] && object1[element !== null]){
     // recursion of nested object goes here. something likei: if (!eqObjects(object1[element], object2[element])) return false
     // }
