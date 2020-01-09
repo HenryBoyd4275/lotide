@@ -23,10 +23,8 @@ const eqObjects = function(object1, object2) {
   for (const element of Object.keys(object1)) {
     
     if (Array.isArray(object1[element])) {
-      console.log("found arrays:",object1[element]," ", object2[element]);
-      let arr1 = object1[element];
-      let arr2 = object2[element];
-      if (!eqArrays(arr1, arr2)) {
+      //console.log("found arrays:",object1[element]," ", object2[element]);
+      if (!eqArrays(object1[element], object2[element])) {
         console.log("arrays not equal:", object1[element], " !== ", object2[element]);
         return false;
       }
